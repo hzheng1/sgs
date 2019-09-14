@@ -1,5 +1,266 @@
 {
 	"cards": [
-		{}
+		{
+			"name": "过河拆桥",
+			"pronunciation": "guò hé chāi qiáo",
+			"engName": "Dismantle",
+			"cnName": "Crossing the river to break the bridge",
+			"effect": "During your turn: target any player's equipment or card in hand; discard that card. This card is not affected by range.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnguohe"
+		}, {
+			"name": "火攻",
+			"pronunciation": "huǒ gōng",
+			"engName": "Blaze",
+			"cnName": "Fire attack",
+			"effect": "During your turn: target any other player with cards in their hand; that player must reveal (to all players) one card in their hand. You may choose to discard 1 card in your hand of the same suit; deal 1 Fire Damage to the target player.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnhuogong"
+		}, {
+			"name": "借刀杀人",
+			"pronunciation": "jiè dāo shā rén",
+			"engName": "Duress",
+			"cnName": "Borrowing a blade to kill someone",
+			"effect": "During your turn: target a player with an equipped weapon, then target another player in their attack range; the first player may either choose to play an Attack card targeting the second player, or to give control of their equipped weapon to you.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnjiedao"
+		}, {
+			"name": "决斗",
+			"pronunciation": "jué dòu",
+			"engName": "Duel",
+			"cnName": "Duel",
+			"effect": "During your turn: target any other player; starting with the targeted player, alternate discarding Attack cards, between you and them only. Stop when a player can no longer discard Attack cards; that player is dealt 1 Damage. This card is not affected by range.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnjuedou"
+		}, {
+			"name": "南蛮入侵",
+			"pronunciation": "nán mán rù qīn",
+			"engName": "Barbarians",
+			"cnName": "NanMan invasion",
+			"effect": "During your turn: all players (other than you, in turn order) must play an Attack card or take 1 damage.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnnanman"
+		}, {
+			"name": "顺手牵羊",
+			"pronunciation": "shùn shǒu qiān yáng",
+			"engName": "Steal",
+			"cnName": "Guiding your hand and pulling a sheep",
+			"effect": "During your turn: target a player within 1 distance and target one equipment or card in hand: add that card to your hand or you may choose to equip it immediately if possible.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnshunshou"
+		}, {
+			"name": "桃园结义",
+			"pronunciation": "táo yuán jié yì",
+			"engName": "Peach Garden",
+			"cnName": "Vow of brotherhood at the peach garden",
+			"effect": "During your turn: all remaining players heal 1 health.",
+			"type": "tool",
+			"cards": [],
+			"image": "jntaoyuan"
+		}, {
+			"name": "铁索连环",
+			"pronunciation": "tié suǒ lián huán",
+			"engName": "Iron Shackles",
+			"cnName": "Iron chains",
+			"effect": "During your turn: choose one of the following: 1) Target two players; those two players are now [Shackled]. 2) Target two [Shackled] players that were [Shackled] by the effect of another [Iron Shackle] card; those two players are now [Unshackled]. When a [Shackled] player receives Fire or Lightning Damage: deal the same amount and type of damage to all other [Shackled] players, then [Unshackle] all players. Damage specifically dealt by the effect of [Shackle] cannot be negated by Dodge or Negate.",
+			"type": "tool",
+			"cards": [],
+			"image": "jntiesuo"
+		}, {
+			"name": "万箭齐发",
+			"pronunciation": "wàn jiàn qí fā",
+			"engName": "Raining Arrows",
+			"cnName": "Ten thousand arrows ready to fire",
+			"effect": "During your turn: all players (other than you, in turn order) must play a Dodge card or take 1 damage.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnwanjian"
+		}, {
+			"name": "五谷丰登",
+			"pronunciation": "wǔ gǔ fēng dēng",
+			"engName": "Harvest",
+			"cnName": "An abundance of five crops",
+			"effect": "During your turn: reveal cards from the top of the Deck, one for remaining player; starting from the turn player and going in turn order, each player selects one card to add to their hand.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnwugu"
+		}, {
+			"name": "无懈可击",
+			"pronunciation": "wú xiè kě jī",
+			"engName": "Negate",
+			"cnName": "Without any attackable weakness",
+			"effect": "Destroy or negate the activation of any card. When used on a card that affects multiple players, negate the effects applying to one player only.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnwuxie"
+		}, {
+			"name": "无中生有",
+			"pronunciation": "wú zhōng shēng yǒu",
+			"engName": "Draw Two",
+			"cnName": "Made something from nothing",
+			"effect": "During your turn: draw 2 cards.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnwuzhong"
+		}, {
+			"name": "兵粮寸断",
+			"pronunciation": "bīng liáng cùn duàn",
+			"engName": "Rations Depleted",
+			"cnName": "Soldiers' Rations Split",
+			"effect": "During your turn: target any player within range; place this card beside their Hero. During that player's turn draw: discard the top card of the Draw Pile; if that card is any suit other than Clubs, the turn player cannot draw during their regular turn draw this turn.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnbingliang"
+		}, {
+			"name": "乐不思蜀",
+			"pronunciation": "lè bù sī shǔ",
+			"engName": "Acedia",
+			"cnName": "Happy while forgetting about home",
+			"effect": "During your turn: target any player, disregarding range; place this card beside their Hero. During that player's turn draw: discard the top card of the Draw Pile; if that card is any suit other than Hearts, the turn player cannot perform any actions (besides drawing) this turn and proceeds immediately to the Discard Phase.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnlebu"
+		}, {
+			"name": "闪电",
+			"pronunciation": "shǎn diàn",
+			"engName": "Lightning",
+			"cnName": "Flashing electricity",
+			"effect": "During your turn: place this card beside your own Hero. During that player's turn draw: discard the top card of the Draw Pile; if that card is a Spade between 2 and 9 inclusive, the turn player takes 3 Lightning Damage, otherwise move this card to the next turn player. When using Negate to respond to this card, it must be used before the card check; furthermore Negate only negates the check and damage to the current turn player and moves this card to the next player.",
+			"type": "tool",
+			"cards": [],
+			"image": "jnshandian"
+		}, {
+			"name": "雌雄双股剑",
+			"pronunciation": "cí xióng shuāng gǔ jiàn",
+			"engName": "Gender Double Swords",
+			"cnName": "Male female double swords",
+			"effect": "Range +2. When attacking a Hero with opposite gender as your Hero: that Hero's player may choose one option (must be done before playing Dodge): 1) Discard 1 random card from their hand. 2) Allow the attacking player to draw 1 card.",
+			"type": "weapon",
+			"cards": ["2s"],
+			"image": "weaponcixiong"
+		}, {
+			"name": "方天画戟",
+			"pronunciation": "fāng tiān huà jǐ",
+			"engName": "Heaven Scorcher Halberd",
+			"cnName": "",
+			"effect": "Range +4. When using an Attack and it is the last card in your hand: target up to 3 different other players within range; this Attack applies to all targeted players.",
+			"type": "weapon",
+			"cards": ["qd"],
+			"image": "weaponfangtian"
+		}, {
+			"name": "贯石斧",
+			"pronunciation": "guàn shí fǔ",
+			"engName": "Rock Cleaving Axe",
+			"cnName": "",
+			"effect": "Range +3. When your Attack has been Dodged: you may discard 2 cards (from equipped cards or in the hand); replay the Dodged attack as if were a new attack.",
+			"type": "weapon",
+			"cards": ["5d"],
+			"image": "weaponguanshi"
+		}, {
+			"name": "寒冰剑",
+			"pronunciation": "hán bīng jiàn",
+			"engName": "Frost Blade",
+			"cnName": "Freezing ice sword",
+			"effect": "Range +2. When your Attack would inflict damage to a player: you may discard 2 cards (or until you cannot discard any more) from that player's hand (randomly) or equipment; prevent all damage inflicted.",
+			"type": "weapon",
+			"cards": ["2s"],
+			"image": "weaponhanbing"
+		}, {
+			"name": "麒麟弓",
+			"pronunciation": "qí lín gōng",
+			"engName": "Unicorn Bow",
+			"cnName": "Qilin Bow",
+			"effect": "Range +5. When your Attack inflicts damage to a player: you may target one of their equipped horses; discard that horse.",
+			"type": "weapon",
+			"cards": ["5h"],
+			"image": "weaponqilin"
+		}, {
+			"name": "青釭剑",
+			"pronunciation": "qīng gāng jiàn",
+			"engName": "Blue Steel Blade",
+			"cnName": "Blue-green steel sword",
+			"effect": "Range +2. When using an Attack card: you may ignore any Armor the defending Hero has equipped.",
+			"type": "weapon",
+			"cards": ["6s"],
+			"image": "weaponqinggang"
+		}, {
+			"name": "青龙偃月刀",
+			"pronunciation": "qīng lóng yǎn yuè dāo",
+			"engName": "Green Dragon Crescent Blade",
+			"cnName": "Blue-green dragon crescent blade",
+			"effect": "Range +3. When using any Attack card that has been Dodged (including from this effect): You may play another Attack card against the same player.",
+			"type": "weapon",
+			"cards": ["5s"],
+			"image": "weaponqinglong"
+		}, {
+			"name": "丈八蛇矛",
+			"pronunciation": "zhàng bā shé máo",
+			"engName": "Serpent Halberd",
+			"cnName": "",
+			"effect": "Range +3. Whenever an Attack can be played by you: you may discard two cards from the hand; treat this as if you had played an Attack card.",
+			"type": "weapon",
+			"cards": [],
+			"image": "weaponzhangba"
+		}, {
+			"name": "诸葛连弩",
+			"pronunciation": "zhū gě lián nǔ",
+			"engName": "Zhu Ge Crossbow",
+			"cnName": "",
+			"effect": "Range +1. During your turn, when you can take an action: there is no limit to the number of Attack cards you can play as an action.",
+			"type": "weapon",
+			"cards": [],
+			"image": "weaponzhuge"
+		}, {
+			"name": "朱雀羽扇",
+			"pronunciation": "zhū què yǔ shàn",
+			"engName": "Feathered Fan",
+			"cnName": "Crimson crow feather fan",
+			"effect": "Range +4. When you Attack with a normal Attack: you may choose to add the Fire attribute to your Attack.",
+			"type": "weapon",
+			"cards": [],
+			"image": "weaponzhuque"
+		}, {
+			"name": "古锭刀",
+			"pronunciation": "gǔ dìng dāo",
+			"engName": "Ancient Scimitar",
+			"cnName": "",
+			"effect": "Range +2. When your Attack inflicts damage, if the target does not have any cards in their hand: increase the damage by 1.",
+			"type": "weapon",
+			"cards": [],
+			"image": "weaponguding"
+		}, {
+			"name": "",
+			"pronunciation": "",
+			"engName": "",
+			"cnName": "",
+			"effect": "",
+			"type": "weapon",
+			"cards": [],
+			"image": ""
+		}, {
+			"name": "银月枪",
+			"pronunciation": "yín yuè qiāng",
+			"engName": "Silver Moon Lance",
+			"cnName": "Silver moon lance",
+			"effect": "Range +3. When you play a black suit card outside of your turn: you may target 1 player within range; that player must play a Dodge, or you deal 1 damage to them.",
+			"type": "weapon",
+			"cards": [],
+			"image": ""
+		}, {
+			"name": "",
+			"pronunciation": "",
+			"engName": "",
+			"cnName": "",
+			"effect": "",
+			"type": "armor",
+			"cards": [],
+			"image": ""
+		}
 	]	
 }

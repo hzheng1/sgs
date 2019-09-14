@@ -11,6 +11,9 @@ http://sanguoshaenglish.blogspot.com/2010/07/raining-arrows.html
 http://sanguoshaenglish.blogspot.com/2010/07/harvest-wu-gu-feng-deng.html
 http://sanguoshaenglish.blogspot.com/2010/07/negate-wu-xie-ke-ji.html
 http://sanguoshaenglish.blogspot.com/2010/07/draw2-wu-zhong-sheng-you.html
+http://sanguoshaenglish.blogspot.com/2010/07/rations-depleted.html
+http://sanguoshaenglish.blogspot.com/2010/07/acedia.html
+http://sanguoshaenglish.blogspot.com/2010/07/lightning.html
 http://sanguoshaenglish.blogspot.com/2010/08/gender-double-swords-ci-xiong-shuang-gu.html
 http://sanguoshaenglish.blogspot.com/2010/08/heaven-scorcher-halberd-fang-tian-hua.html
 http://sanguoshaenglish.blogspot.com/2010/08/rock-cleaving-axe-guan-shi-fu.html
@@ -36,9 +39,27 @@ http://sanguoshaenglish.blogspot.com/2010/08/zhua-huang-fei-dian.html
 http://sanguoshaenglish.blogspot.com/2010/08/zi-xing.html
 `.trim().split('\n');
 
-const Jimp = require('jimp');
-const http = require('http');
+const Jimp = require('jimp'),
+			http = require('http'),
+			fs = require('fs'),
+			request = require('request');
 
 cards.forEach((elem) => {
-	console.log(elem);
+	request.get({uri: elem}).pipe(fs.createWriteStream('./asdf.txt'));
+	request({
+		url: elem,
+		method: 'GET'
+	}, (err, res, body) => {
+		const matches = body.match(/(http:\/\/[A-Za-z0-9-\_\.]*\.blogspot\.com\/[A-Za-z0-9\-_\/]+\/s320\/[a-z]+.jpg)/g);
+		const imageURL = matches[matches.length - 1];
+		const filename = imageURL.split('/').pop();
+		request(imageURL).pipe(fs.createWriteStream(`../data/rawImages/${filename}`)).on('close', () => {
+			Jimp.read(`../data/rawImages/${filename}`, (err, img) => {
+				if (img.bitmap.width > img.bitmap.height) {
+					img = img.rotate(90);
+				}
+				img.crop(30, 60, 225 - 60, 136).write(`../data/rawImages/cropped-${filename}`);
+			});
+		});
+	})
 });

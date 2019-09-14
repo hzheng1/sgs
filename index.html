@@ -5,6 +5,27 @@
 	<script src="https://unpkg.com/onsenui/js/onsenui.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
 	<script src="index.js"></script>
+	<style>
+.card-search-img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	max-width: 100%;
+}
+
+.cn-desc{
+	color: grey;
+	text-align: right;
+	margin: 2px;
+	margin-right: 4px;
+}
+
+#card-data-title {
+	margin: 8px;
+}
+	</style>
 </head>
 <body>
 	<ons-navigator swipeable id="sgs-navigator" page="search.html"></ons-navigator>
@@ -27,33 +48,46 @@
 				<ons-list-item>
 					<div class="center">Tools</div>
 					<div class="right">
-						<ons-switch modifier="material" id="search-tools" checked></ons-switch>
+						<ons-switch modifier="material" id="search-tools" checked onchange="cardSearchChanged()"></ons-switch>
 					</div>
 				</ons-list-item>
 				<ons-list-item>
 					<div class="center">Weapons</div>
 					<div class="right">
-						<ons-switch modifier="material" id="search-weapons" checked></ons-switch>
+						<ons-switch modifier="material" id="search-weapons" checked onchange="cardSearchChanged()"></ons-switch>
 					</div>
 				</ons-list-item>
 				<ons-list-item>
 					<div class="center">Armor</div>
 					<div class="right">
-						<ons-switch modifier="material" id="search-armor" checked></ons-switch>
+						<ons-switch modifier="material" id="search-armor" checked onchange="cardSearchChanged()"></ons-switch>
 					</div>
 				</ons-list-item>
 				<ons-list-item>
 					<div class="center">Horses</div>
 					<div class="right">
-						<ons-switch modifier="material" id="search-horses" checked></ons-switch>
+						<ons-switch modifier="material" id="search-horses" checked onchange="cardSearchChanged()"></ons-switch>
 					</div>
 				</ons-list-item>
 			</ons-list>
 			<p style="text-align: center; margin-top: 10px;">
-				<ons-search-input id="card-search-bar" placeholder="Search" onchange="cardSearchChanged(this.value)">
+				<ons-search-input id="card-search-bar" placeholder="Pip Search" onchange="cardSearchChanged()">
 				</ons-search-input>
 			</p>
 			<div id="search-results"></div>
+		</ons-page>
+	</template>
+	<template id="card-data.html">
+		<ons-page id="card-data">
+			<ons-toolbar>
+				<div class="left"><ons-back-button>Back</ons-back-button></div>
+				<div id="card-data-toolbar" class="center"></div>
+			</ons-toolbar>
+			<h1 class="title center" id="card-data-title"></h1>
+			<img id="card-data-image" style="width:90%;padding-left:5%;padding-right:5%"></img>
+			<div class="cn-desc" id="card-data-cn-meaning"></div>
+			<ons-card><p id="card-data-desc"></p></ons-card>
+
 		</ons-page>
 	</template>
 	<template id="hero-search.html">
