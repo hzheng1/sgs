@@ -334,5 +334,18 @@
 			"cards": ["kd"],
 			"image": "horsezixin"
 		}
-	]	
+	],
+	"heroes": [
+		{
+			"name": "",
+			"pronunciation": "",
+			"engName": "",
+			"blurb": "",
+			"faction": "",
+			"health": 0,
+			"isRuler": false,
+			"effect": "",
+			"image": ""
+		}
+	]
 }
