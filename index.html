@@ -25,6 +25,10 @@
 #card-data-title {
 	margin: 8px;
 }
+
+#hero-data-title {
+	margin: 8px;
+}
 	</style>
 </head>
 <body>
@@ -87,7 +91,6 @@
 			<img id="card-data-image" style="width:90%;padding-left:5%;padding-right:5%"></img>
 			<div class="cn-desc" id="card-data-cn-meaning"></div>
 			<ons-card><p id="card-data-desc"></p></ons-card>
-
 		</ons-page>
 	</template>
 	<template id="hero-search.html">
@@ -95,7 +98,83 @@
 			<ons-toolbar>
 				<div class="center">Hero Search</div>
 			</ons-toolbar>
-		</ons-page>	
+			<ons-list>
+				<ons-list-item>
+					<div class="center">Shu (Red, 蜀)</div>
+					<div class="right">
+						<ons-switch modifier="material" id="search-shu" checked onchange="heroSearchChanged()"></ons-switch>
+					</div>
+				</ons-list-item>
+				<ons-list-item>
+					<div class="center">Wei (Blue, 魏)</div>
+					<div class="right">
+						<ons-switch modifier="material" id="search-wei" checked onchange="heroSearchChanged()"></ons-switch>
+					</div>
+				</ons-list-item>
+				<ons-list-item>
+					<div class="center">Wu (Green, 吴)</div>
+					<div class="right">
+						<ons-switch modifier="material" id="search-wu" checked onchange="heroSearchChanged()"></ons-switch>
+					</div>
+				</ons-list-item>
+				<ons-list-item>
+					<div class="center">Hero (White, 群)</div>
+					<div class="right">
+						<ons-switch modifier="material" id="search-heroes" checked onchange="heroSearchChanged()"></ons-switch>
+					</div>
+				</ons-list-item>
+				<ons-list-item>
+					<div class="center">God (Yellow, 神)</div>
+					<div class="right">
+						<ons-switch modifier="material" id="search-gods" checked onchange="heroSearchChanged()"></ons-switch>
+					</div>
+				</ons-list-item>
+				<ons-list-item>
+					<div class="center">Health</div>
+					<div class="right">
+						<ons-select class="select" modifier="material" id="search-health" onchange="heroSearchChanged()">
+							<select class="select-input" id="search-health-select">
+							</select>
+						</ons-select>
+					</div>
+				</ons-list-item>
+				<p style="text-align: center; margin-top: 10px;">
+					<ons-search-input id="hero-search-bar" placeholder="Search" onchange="heroSearchChanged()">
+					</ons-search-input>
+				</p>
+				<div id="hero-search-results"></div>
+			</ons-list>
+		</ons-page>
+	</template>
+	<template id="hero-data.html">
+		<ons-page id="hero-data">
+			<ons-toolbar>
+				<div class="left"><ons-back-button>Back</ons-back-button></div>
+				<div id="hero-data-toolbar" class="center"></div>
+			</ons-toolbar>
+			<h1 class="title center" id="hero-data-title"></h1>
+			<img id="hero-data-image" style="width:70%;padding-left:15%;padding-right:15%"></img>
+			<div class="cn-desc" id="hero-data-cn-meaning"></div>
+			<ons-list>
+				<ons-list-item>
+					<div class="left">Faction:</div>
+					<div class="right" id="hero-faction"></div>
+				</ons-list-item>
+				<ons-list-item>
+					<div class="left">Gender:</div>
+					<div class="right" id="hero-gender"></div>
+				</ons-list-item>
+				<ons-list-item>
+					<div class="left">Health:</div>
+					<div class="right" id="hero-health"></div>
+				</ons-list-item>
+				<ons-list-item>
+					<div class="left">Is Ruler?</div>
+					<div class="right" id="hero-ruler"></div>
+				</ons-list-item>
+			</ons-list>
+			<ons-card><p id="hero-data-desc"></p></ons-card>
+		</ons-page>
 	</template>
 </body>
 </html>
