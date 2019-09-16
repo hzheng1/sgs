@@ -612,7 +612,7 @@
 			"gender": "m",
 			"health": 4,
 			"isRuler": false,
-			"effect": "狂骨\nWhen inflicting damage to player(s) within 1 Range: heal 1 health for every 1 damage inflicted.",
+			"effect": "狂骨\nWhen inflicting damage to player(s) within 1 Range: heal 1 health for every 1 Damage inflicted.",
 			"image": "shuweiyan"
 		},
 		{
@@ -660,7 +660,7 @@
 			"gender": "m",
 			"health": 3,
 			"isRuler": false,
-			"effect": "天妒\nWhen performing a Judgment where the target of the effect is this Hero: you can keep the card discarded for the Judgment.\n\n遗计\nWhen receiving Damage, for each 1 Damage recieved: you can draw 2 cards, then immediately you can add as many of the 2 cards to another player's hand.",
+			"effect": "天妒\nWhen performing a Judgment where the target of the effect is this Hero: you can keep the card discarded for the Judgment.\n\n遗计\nWhen receiving damage, for each 1 Damage recieved: you can draw 2 cards, then immediately you can add as many of the 2 cards to another player's hand.",
 			"image": "weiguojia"
 		},
 		{
@@ -684,7 +684,7 @@
 			"gender": "m",
 			"health": 4,
 			"isRuler": false,
-			"effect": "刚烈\nWhen you receive damage: for every 1 Damage received, you can perform a Judgment (discard the top card of the Draw Pile); if the card is not of the Hearts suit, the source of the Damage must choose one of the following options: 1) Receive 1 Damage. 2) Discard 2 cards from the hand.",
+			"effect": "刚烈\nWhen you receive damage: for every 1 Damage received, you can perform a Judgment (discard the top card of the Draw Pile); if the card is not of the Hearts suit, the source of the damage must choose one of the following options: 1) Receive 1 Damage. 2) Discard 2 cards from the hand.",
 			"image": "weixiahoudun"
 		},
 		{
@@ -744,7 +744,7 @@
 			"gender": "m",
 			"health": 3,
 			"isRuler": false,
-			"effect": "驱虎\nOnce per your turn, when you can perform Actions: you can target another character with more health and [Points Duel]; if you win, that player deals 1 Damage to another player in their Range, otherwise that player deals 1 Damage to you. This Damage is not treated as an Attack. [Points Duel]: Both players select a card from the hand and compare them; discard both cards and the player with the higher card number (King being highest and Ace being lowest) wins, with ties broken in favor of the defender.\n\n节命\nWhen you receive Damage, for each 1 Damage received: target any player; that player draws cards until their hand size is equal to their maximum health.",
+			"effect": "驱虎\nOnce per your turn, when you can perform Actions: you can target another character with more health and [Points Duel]; if you win, that player deals 1 Damage to another player in their Range, otherwise that player deals 1 Damage to you. This damage is not treated as an Attack. [Points Duel]: Both players select a card from the hand and compare them; discard both cards and the player with the higher card number (King being highest and Ace being lowest) wins, with ties broken in favor of the defender.\n\n节命\nWhen you receive damage, for each 1 Damage received: target any player; that player draws cards until their hand size is equal to their maximum health.",
 			"image": "weixunyu"
 		},
 		{
@@ -780,7 +780,7 @@
 			"gender": "m",
 			"health": 3,
 			"isRuler": true,
-			"effect": "行殇\nWhen a player dies: you can add all cards in their hand and equipped to the hand.\n\n放逐\nWhen you receive Damage: target any other player; that player must draw 1 card for your every 1 missing health after Damage has been applied. Flip their Hero over until their next turn (skip that player's next turn).\n\n颂威\nWhen any other Wei Hero performs a Judgment and the Judgment card is of a black suit: that player can choose for you to draw 1 card.",
+			"effect": "行殇\nWhen a player dies: you can add all cards in their hand and equipped to the hand.\n\n放逐\nWhen you receive damage: target any other player; that player must draw 1 card for your every 1 missing health after damage has been applied. Flip their Hero over until their next turn (skip that player's next turn).\n\n颂威\nWhen any other Wei Hero performs a Judgment and the Judgment card is of a black suit: that player can choose for you to draw 1 card.",
 			"image": "weicaopi"
 		},
 		{
@@ -912,7 +912,7 @@
 			"gender": "f",
 			"health": 3,
 			"isRuler": false,
-			"effect": "天香\nWhen receiving Damage: you can discard a card of the Hearts suit from the hand and target another player; that player receives all Damage and draws cards equal to the amount of their missing health after receiving Damage.\n\n红颜\nTreat all cards that are of the Spades suit as of the Heart suit as well. This effect only applies to you.",
+			"effect": "天香\nWhen receiving damage: you can discard a card of the Hearts suit from the hand and target another player; that player receives all damage and draws cards equal to the amount of their missing health after receiving damage.\n\n红颜\nTreat all cards that are of the Spades suit as of the Heart suit as well. This effect only applies to you.",
 			"image": "wuxiaoqiao"
 		},
 		{
@@ -1080,7 +1080,7 @@
 			"gender": "m",
 			"health": 3,
 			"isRuler": true,
-			"effect": "七星\nAt the start of the game: instead of being dealt 4 cards, draw 11 cards and select 4 as your starting hand. The remaining cards are removed from play facedown, marked as [Star] cards. After your turn draw: you may exchange any number of cards in the hand with any number of [Star] cards.\n\n狂风\nDuring the end of your turn: you may discard 1 [Star] card and target 1 player; until when your next turn would be, all Fire Damage dealt to that player is increased by 1.\n\n大雾\nDuring the end of your turn: you can discard any number of [Star] cards and target that many player(s); until when your next turn would be, all targeted players are immune to all Damage except Lightning Damage.",
+			"effect": "七星\nAt the start of the game: instead of being dealt 4 cards, draw 11 cards and select 4 as your starting hand. The remaining cards are removed from play facedown, marked as [Star] cards. After your turn draw: you may exchange any number of cards in the hand with any number of [Star] cards.\n\n狂风\nDuring the end of your turn: you may discard 1 [Star] card and target 1 player; until when your next turn would be, all Fire Damage dealt to that player is increased by 1.\n\n大雾\nDuring the end of your turn: you can discard any number of [Star] cards and target that many player(s); until when your next turn would be, all targeted players are immune to all damage except Lightning Damage.",
 			"image": "shenzhuge"
 		},
 		{
