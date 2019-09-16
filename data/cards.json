@@ -564,7 +564,7 @@
 			"gender": "m",
 			"health": 4,
 			"isRuler": false,
-			"effect": "咆哮\n\nDuring your turn, when you can take an action: there is no limit to the number of Attack cards you can play as an action.",
+			"effect": "咆哮\nDuring your turn, when you can take an action: there is no limit to the number of Attack cards you can play as an action.",
 			"image": "shuzhangfei"
 		},
 		{
