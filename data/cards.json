@@ -389,7 +389,7 @@
 			"pronunciation": "téng jiǎ",
 			"engName": "Rattan Armour",
 			"cnName": "",
-			"effect": "Attack cards, Barbarians (南蛮入侵) and Raining Arrows (万箭齐发) cards have no effect on the owner. Increase all Fire Damage received by the owner by 1.",
+			"effect": "Attack cards, [Barbarians] (南蛮入侵) and [Raining Arrows] (万箭齐发) cards have no effect on the owner. Increase all Fire Damage received by the owner by 1.",
 			"type": "armor",
 			"cards": [
 				"2c",
@@ -588,7 +588,7 @@
 			"gender": "m",
 			"health": 3,
 			"isRuler": false,
-			"effect": "连环\nEvery card in the hand that is of the Clubs suit can be used as Iron Shackles (铁索连环).\n\n涅盘\nOnce per game, when this Hero has 0 health: you may discard all cards (from the hand and equipped); heal 3 health and draw 3 cards.",
+			"effect": "连环\nEvery card in the hand that is of the Clubs suit can be used as [Iron Shackles] (铁索连环).\n\n涅盘\nOnce per game, when this Hero has 0 health: you may discard all cards (from the hand and equipped); heal 3 health and draw 3 cards.",
 			"image": "shupangtong"
 		},
 		{
