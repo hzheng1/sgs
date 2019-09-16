@@ -1,0 +1,4 @@
+heroImages/*.jpg
+!heroImages/cropped-*.jpg
+rawImages/*.jpg
+!rawImages/cropped-*.jpg
