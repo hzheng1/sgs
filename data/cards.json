@@ -1140,7 +1140,7 @@
 			"gender": "m",
 			"health": 5,
 			"isRuler": true,
-			"effect": "狂暴\nAt the start of the game: receive 2 [Rage Token]s. When you deal or receive Damage: for every 1 Damage, receive 1 [Rage Token].\n\n无谋\nWhen using an instantaneous Tool card: discard 1 [Rage Token] or receive 1 Damage.\n\n无前\nWhen you can perform Actions: you can discard 2 [Rage Token]s and target 1 player; until the end of the turn, negate the effects of that target's Armor and you gain the following effect: When Attacking: your opponent must use 2 Dodge cards for every 1 Dodge they would other wise use. When affected by the effects of [Duel] (决斗): the opponent must use 2 Attack cards for every 1 Attack they would otherwise use.",
+			"effect": "狂暴\nAt the start of the game: receive 2 [Rage Token]s. When you deal or receive Damage: for every 1 Damage, receive 1 [Rage Token].\n\n无谋\nWhen using an instantaneous Tool card: discard 1 [Rage Token] or receive 1 Damage.\n\n无前\nWhen you can perform Actions: you can discard 2 [Rage Token]s and target 1 player; until the end of the turn, negate the effects of that target's Armor and you gain the following effect: When Attacking: your opponent must use 2 Dodge cards for every 1 Dodge they would other wise use. When affected by the effects of [Duel] (决斗): the opponent must use 2 Attack cards for every 1 Attack they would otherwise use.\n\n神愤\nOnce per your own turn, when you would be able to take Actions: you can discard 6 [Rage Token]s: Every player other than yourself receives 1 Damage, discards all equipped cards, and discards 4 cards from their hands. Then, flip this Hero over until your next turn (skip your next turn).",
 			"image": "shenlubu"
 		}
 	]
