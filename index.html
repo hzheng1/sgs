@@ -40,9 +40,31 @@
 				</ons-tab>
 				<ons-tab page="hero-search.html" label="Heroes" icon="md-face">
 				</ons-tab>
+				<ons-tab page="rules.html" label="Rules" icon="md-book">
+				</ons-tab>
 			</ons-tabbar>
 		</ons-page>
 	</template>
+	<template id="rules.html">
+		<ons-page id="rules">
+			<ons-toolbar>
+				<div class="center">Rules</div>
+			</ons-toolbar>
+			<ons-list>
+				<ons-list-item tappable onclick="document.querySelector('#sgs-navigator').pushPage('rules-1.html');">Game Setup</ons-list-item>
+			</ons-list>
+		</ons-page>
+	</template>
+	<div>
+		<template id="rules-1.html">
+			<ons-page id="rules-1">
+			<ons-toolbar>
+				<div class="left"><ons-back-button>Back</ons-back-button></div>
+				<div class="center">Game Setup</div>
+			</ons-toolbar>
+		</ons-page>
+		</template>
+	</div>
 	<template id="card-search.html">
 		<ons-page id="card-search">
 			<ons-toolbar>

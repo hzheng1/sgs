@@ -7,7 +7,7 @@ document.addEventListener('init', (event) => {
 		document.querySelector('#card-data-title').innerHTML = `(${page.data.pronunciation}): ${page.data.engName}`;
 		document.querySelector('#card-data-image').src = `data/rawImages/cropped-${page.data.image}.jpg`;
 		document.querySelector('#card-data-cn-meaning').innerHTML = page.data.cnName;
-		document.querySelector('#card-data-desc').innerHTML = page.data.effect;
+		document.querySelector('#card-data-desc').innerHTML = helperReplaceCardLinks(page.data.effect);
 	} else if (page.id === 'hero-search') {
 		heroSearchChanged();
 	} else if (page.id === 'hero-data') {
@@ -15,13 +15,22 @@ document.addEventListener('init', (event) => {
 		document.querySelector('#hero-data-title').innerHTML = `(${page.data.pronunciation}): ${page.data.engName}`;
 		document.querySelector('#hero-data-image').src = `data/heroImages/cropped-${page.data.image}.jpg`;
 		document.querySelector('#hero-data-cn-meaning').innerHTML = page.data.blurb;
-		document.querySelector('#hero-data-desc').innerHTML = page.data.effect.replace(/\n/g, '<br />');
+		document.querySelector('#hero-data-desc').innerHTML = helperReplaceCardLinks(page.data.effect.replace(/\n/g, '<br />'));
 		document.querySelector('#hero-faction').innerHTML = HERO_ELEMS.FACTION[page.data.faction];
 		document.querySelector('#hero-gender').innerHTML = HERO_ELEMS.GENDER[page.data.gender];
 		document.querySelector('#hero-health').innerHTML = page.data.health;
 		document.querySelector('#hero-ruler').innerHTML = HERO_ELEMS.CHECKMARK[page.data.isRuler ? 'CHECKED' : 'UNCHECKED'];
 	}
 });
+
+const helperReplaceCardLinks = (effect) => {
+	if (REPLACEMENT_LINKS) {
+		REPLACEMENT_LINKS.forEach((elem) => {
+			effect = effect.replace(elem.regex, elem.replace);
+		});
+	}
+	return effect;
+};
 
 let cardsData = undefined;
 
@@ -60,14 +69,7 @@ HERO_ELEMS.FACTION[HERO_TYPE.GOD] = 'God (神)';
 
 const cardSearchChanged = () => {
 	if (!cardsData) {
-		fetch('data/cards.json').then((res) => {return res.json();}).then((json) => {
-			cardsData = json;
-			cardsData.cards.forEach((item, i) => {
-				item['index'] = i;
-			});
-			cardSearchChanged();
-		});
-		return;
+		return loadCardsData(cardSearchChanged);;
 	}
 	const searchTools = document.querySelector('#search-tools').checked,
 				searchWeapons = document.querySelector('#search-weapons').checked,
@@ -95,23 +97,47 @@ const cardSearchChanged = () => {
 	document.querySelector('#search-results').innerHTML = searchResultHTML;
 };
 
+let REPLACEMENT_LINKS = undefined;
+
+const initReplacementLinks = () => {
+	if (REPLACEMENT_LINKS) {
+		return;
+	}
+	REPLACEMENT_LINKS = [];
+	cardsData.cards.forEach((item, i) => {
+		REPLACEMENT_LINKS.push({
+			regex: new RegExp(`\\[${item.engName}\\] \\(${item.name}\\)`, 'g'),
+			replace: `<a href="javascript:void(0);" onclick="cardImageClicked(${i});">[${item.engName}] (${item.name})</a>` 
+		});
+	});
+};
+
+const loadCardsData = (callback) => {
+	fetch('data/cards.json').then((res) => {return res.json();}).then((json) => {
+		cardsData = json;
+		cardsData.cards.forEach((item, i) => {
+			item['index'] = i;
+		});
+		let healthValues = new Set();
+		cardsData.heroes.forEach((item, i) => {
+			item['index'] = i;
+			healthValues.add(item.health);
+		});
+		let selectOptions = '<option value="-1">All</option>';
+		[...healthValues].sort().forEach((elem) => {
+			selectOptions += `<option value="${elem}">${elem}</option>`;
+		});
+		document.querySelector('#search-health-select').innerHTML = selectOptions;
+		initReplacementLinks();
+		if (callback) {
+			callback();
+		}
+	});
+};
+
 const heroSearchChanged = () => {
 	if (!cardsData) {
-		fetch('data/cards.json').then((res) => {return res.json();}).then((json) => {
-			cardsData = json;
-			let healthValues = new Set();
-			cardsData.heroes.forEach((item, i) => {
-				item['index'] = i;
-				healthValues.add(item.health);
-			});
-			let selectOptions = '<option value="-1">All</option>';
-			[...healthValues].sort().forEach((elem) => {
-				selectOptions += `<option value="${elem}">${elem}</option>`;
-			});
-			document.querySelector('#search-health-select').innerHTML = selectOptions;
-			heroSearchChanged();
-		});
-		return;
+		return loadCardsData(heroSearchChanged);
 	}
 	const searchShu = document.querySelector('#search-shu').checked,
 				searchWei = document.querySelector('#search-wei').checked,
