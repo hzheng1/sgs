@@ -52,6 +52,8 @@
 			</ons-toolbar>
 			<ons-list>
 				<ons-list-item tappable onclick="document.querySelector('#sgs-navigator').pushPage('rules-1.html');">Game Setup</ons-list-item>
+				<ons-list-item tappable onclick="document.querySelector('#sgs-navigator').pushPage('rules-2.html');">Basic Turns</ons-list-item>
+				<ons-list-item tappable onclick="document.querySelector('#sgs-navigator').pushPage('rules-3.html');">Range</ons-list-item>
 			</ons-list>
 		</ons-page>
 	</template>
@@ -62,6 +64,91 @@
 				<div class="left"><ons-back-button>Back</ons-back-button></div>
 				<div class="center">Game Setup</div>
 			</ons-toolbar>
+			<div style="margin:4px">
+				<h5>Number of Players:</h5>
+				<ons-segment id="player-count" style="width: 90%">
+					<button>3</button>
+					<button>4</button>
+					<button>5</button>
+					<button>6</button>
+					<button>7</button>
+					<button>8</button>
+					<button>9</button>
+					<button>10</button>
+				</ons-segment>
+				<h2>Picking Roles</h2>
+				<p>To begin, shuffle <span id="num-players-red">1</span> Red, <span id="num-players-green">1</span> Green, <span id="num-players-blue">1</span> Blue, and <span id="num-players-yellow">0</span> Yellow Role cards and randomly distribute them to the players. All players except the Ruler (Red) should hide their role! Have the Ruler reveal their role card.</p>
+				<h3>Ruler (Red) Role</h3>
+				<p>Win condition: Kill all Rebels and Defectors while you remain alive. Lose condition: You die.</p>
+				<h3>Loyalist (Yellow) Role</h3>
+				<p>Win condition: Kill all Rebels and Defectors while the Ruler remains alive. Lose condition: The Ruler dies. When you die: if the Ruler killed you, the Ruler loses all cards equipped and in their hand.</p>
+				<h3>Rebel (Green) Role</h3>
+				<p>Win condition: The Ruler dies. Lose condition: The Ruler/Loyalists win. When you die: your killer draws 3 cards from the deck.</p>
+				<h3>Defector (Blue) Role</h3>
+				<p>Win condition: All other players die and you kill the Ruler. Lose condition: You die or the game ends.</p>
+				<h2>Heroes</h2>
+				<p>Your in game character is a Hero card. When your Hero dies, you can no longer play/affect the game. Hero cards have factions, genders, health, and effects. Hero cards are also split into Rulers (marked with a gold border around their picture) and non-Rulers. Factions include Shu (Red, 蜀), Wei (Blue, 魏), Wu (Green, 吴), Hero (White, 群), and God (Yellow, 神). Heroes are either Male or Female (based on their counterparts in Chinese history/legends), not denoted in the card but available in this web resource. Heroes have health based on their pips in the top-left corner. And finally, Heroes have abilities that are on the bottom of the card (translated in this web resource). Note that some abilities are passive, some can be activated, some give the user choice, and others may even be forcibly enforced; be sure to read the text of the ability to see when the ability can be used and what it does.</p>
+				<h2>Picking Heroes</h2>
+				<p>The Ruler chooses (at random) from all Ruler Heroes, revealing their choice to all players. Then, each player is dealt 3 Heroes at random and must choose their Hero from that pool. All other Heroes are revealed at the same time (if you have chosen, place your hero upside down and flip it when everyone has picked theirs). Then, grab the corresponding health card (denoted by having pips equal to the number of pips for your Hero) and place it with your Hero card. As your hero loses health, cover up more of the pips on your health card with your Hero card. <span id="health-blurb"></span>
+				</p>
+				<h2>Field Setup</h2>
+				<p>Shuffle all Deck cards (any card with 三国杀 on the back) into one pile and place it in the center of all players. Players sit in a circle and place their Hero and Health cards next to each other (using the Hero card to cover up pips of health when it is lost). Place the role card next to the Health card facedown (unless you are the Ruler).	The area in front of your Hero, Health, and Role card is your equipment slot. Your hand will be kept in your hand and private to all other players. Designate any empty space (typically near the Deck) as a discard pile. When the Deck runs out of cards, shuffle the discard pile and make it the deck. Finally, each player draws 4 cards.
+				</p>
+			</div>
+		</ons-page>
+		</template>
+		<template id="rules-2.html">
+			<ons-page id="rules-2">
+			<ons-toolbar>
+				<div class="left"><ons-back-button>Back</ons-back-button></div>
+				<div class="center">Basic Turns</div>
+			</ons-toolbar>
+			<div style="margin:4px">
+				<h2>Turn Order</h2>
+				<p>Starting with the Ruler, turn order goes counter clockwise, with each living player taking turns in that cycle.</p>
+				<h2>Turn Anatomy</h2>
+				<h3>Hero Ability Phase</h3>
+				<p>This phase is just a placeholder for specific Hero abilities that have timings specifically before Judgments or at the beginning of a player's turn. If your Hero doesn't mention this, don't worry about this phase. Since you cannot perform basic Actions during this phase, you cannot activate effects that would otherwise require you to be able to take Actions in this phase (see the later Action Phase).</p>
+				<h3>Judgment Phase</h3>
+				<p>This is when some persistent time-based Judgments happen (like with delayed tools and some Hero effects). If there are no tools/Hero effects that require Judgments every turn, ignore this phase.</p>
+				<h3>Draw Phase</h3>
+				<p>The turn player draws 2 cards.</p>
+				<h3>Action Phase</h3>
+				<p>The turn player can choose to play card(s) or take actions. The order of operations is up to the turn player. You can use Tool Cards (unlimited), Attacks (one per turn), other Basic cards (no limit), Tool cards (no limit), and Equipment cards (no limit). Some Hero abilities can also be activated during this phase, as long as the effect permits.</p>
+				<h3>Discard Phase</h3>
+				<p>The turn player must discard cards so that their hand size is equal to their current health (if they already have fewer or equal cards to their current health, they cannot discard).</p>
+				<h3>End Turn</h3>
+				<p>The turn ends and the next player in counterclockwise order takes their turn.</p>
+				<h2>Dying</h2>
+				<p>When a player reaches 0 health, they are on the brink of death, in which any player can use a Peach to revive the player to 1 health. If the player is not saved, they die and their role card is revealed. Some roles have effects when they die (see Game Setup rules).</p>
+				<h2>Basic Cards</h2>
+				<h3>Attack (杀)</h3>
+				<p>This card is used to initiate an attack. Target someone with this to inflict damage. Attacks can have attributes; Fire and Lightning damage is indicated with the suit of the card (either a Fire or Lightning icon). Only one Attack card can be used per turn, unless otherwise stated by card effects.</p>
+				<h3>Dodge (闪)</h3>
+				<p>This card is used to dodge attacks. Play this when targeted by an Attack to not take damage.</p>
+				<h3>Peach (桃)</h3>
+				<p>Peaches heal the target by 1 health Peaches can be used to rescue units with 0 health. Peaches can also be used on targets other than yourself (when rescuing only).</p>
+				<h3>Wine (酒)</h3>
+				<p>Wine can be used in two ways: 1) When used on your turn (can only be used this way once per turn), the next Attack you play that is successful does 1 extra Damage. 2) When reaching 0 health, use this on yourself to heal 1 health.</p> 
+				<h2>Equipment</h2>
+				<p>When an Equipment Card (Armor, Weapon, or Horse) is played, it is placed in front of your Hero card. Only one Armor, one Weapon, one +1 Horse and one -1 Horse can be equipped at a time (which implies max 4 equipment, one of each type). When playing an Equipment Card of the same type of the one you already have, discard the existing equipment to replace it with the new card. When equipped, the Equipment Card's effect is in play. Equipment cards can only be discarded by replacement or through card effects.
+				</p>
+			</div>
+		</ons-page>
+		</template>
+		<template id="rules-3.html">
+			<ons-page id="rules-3">
+			<ons-toolbar>
+				<div class="left"><ons-back-button>Back</ons-back-button></div>
+				<div class="center">Range</div>
+			</ons-toolbar>
+			<div style="margin:4px">
+				<h2>Distance</h2>
+				<p>Your distance to another player is equal to the number of players between you and them in turn order. A player that has their turn directly before or after you has a distance of 1, whereas players that go N turns before or after you have a distance of N. Distance comes into play to see which players can be targeted by certain effects or attacks.</p>
+				<h2>Physical Range</h2>
+				<p>Physical Range is the range at which you can use Tools or other card effects (involving non-attacking abilities). Physical Range starts at 1, but can be increased with cards with effects (such as -1 Horses).</p>
+				<p>Attack Range is the range at which you can use Attacks or other card effects that specifically use Attack Range. Attack Range is 1 with no weapons equipped, but becomes the Range of the weapon when equipped. It can also vary with cards with effects (such as -1 Horses).</p>
+			</div>
 		</ons-page>
 		</template>
 	</div>

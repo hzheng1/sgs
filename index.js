@@ -20,8 +20,31 @@ document.addEventListener('init', (event) => {
 		document.querySelector('#hero-gender').innerHTML = HERO_ELEMS.GENDER[page.data.gender];
 		document.querySelector('#hero-health').innerHTML = page.data.health;
 		document.querySelector('#hero-ruler').innerHTML = HERO_ELEMS.CHECKMARK[page.data.isRuler ? 'CHECKED' : 'UNCHECKED'];
+	} else if (page.id === 'rules-1') {
+		document.querySelectorAll('#player-count button').forEach((button) => {
+			button.addEventListener('click', function () {
+				const counts = RULES_1_PLAYER_COUNT[parseInt(this.textContent)];
+				for (let color in counts) {
+					document.querySelector(`#num-players-${color}`).innerHTML = counts[color];
+				}
+				if (parseInt(this.textContent) >= 5) {
+					document.querySelector('#health-blurb').innerHTML = 'Since there are 5 or more players, the Ruler gains 1 extra max health.'
+				}
+			});
+		});
 	}
 });
+
+const RULES_1_PLAYER_COUNT = [null, null, null, 
+	{red: 1, yellow: 0, blue: 1, green: 1},
+	{red: 1, yellow: 1, blue: 1, green: 1},
+	{red: 1, yellow: 1, blue: 1, green: 2},
+	{red: 1, yellow: 1, blue: 1, green: 3},
+	{red: 1, yellow: 2, blue: 1, green: 3},
+	{red: 1, yellow: 2, blue: 1, green: 4},
+	{red: 1, yellow: 3, blue: 1, green: 4},
+	{red: 1, yellow: 3, blue: 2, green: 4}
+];
 
 const helperReplaceCardLinks = (effect) => {
 	if (REPLACEMENT_LINKS) {
